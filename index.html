@@ -181,10 +181,77 @@
             color: #fff !important;
             transition: color .2s;
         }
+
+        .modal {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #00000075;
+        transition: all .4s;
+        z-index: 99;
+    }
+    
+    .modal-open {
+        visibility: visible;
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+    .modal__content {
+        border-radius: 6px;
+        position: relative;
+        width: 600px;
+        background: #fafafa;
+        overflow: hidden;
+        padding: 1em 0em 0em 0em;
+    }
+    
+    .modal_images_container img {
+        margin: 10px 2px;
+    }
+
+    .project-wrap {
+        cursor: pointer;
+    }
+    .modal_images_container {
+        max-height: 90vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0px 20px 20px;
+            padding-right: 20px;
+            overflow: scroll;
+        }
+
+        .modal__close {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px;
+            color: #1d1d1d;
+            text-decoration: none;
+        }
+        .modal_backdrop {
+            cursor: pointer;
+            position: absolute;
+            top: 00px;
+            right: 00px;
+            width: 100vw;
+            height: 100vh;
+        }
     </style>
 </head>
 
-<body>
+<body id="body">
     <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" node-id="d3dbbbfd-783f-ecd5-e9f9-8c081fa475d5" role="banner" data-duration="400" id="Navbar">
         <div class="navigation-container">
             <div class="navigation-left">
@@ -410,6 +477,9 @@
             <!-- </div> -->
         <!-- </div>
     </div> -->
+    <!-- Modal Section -->
+    <div id="image_modals">
+    </div>
     <div id="Work" class="content-section">
         <div class="container">
             <div class="title-left">
@@ -420,7 +490,7 @@
                     <div class="w-dyn-list">
                         <div role="list" class="collection-list w-dyn-items w-row">
                             <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a href="" class="project-wrap w-inline-block">
+                                <a onclick="toggleModal('lapinospizza', 'open')" class="project-wrap w-inline-block">
                                     <div class="project-square"><img loading="lazy" src="./assets/4.JPG" alt="" sizes="94vw"
                                             class="project-image" /></div>
                                     <div class="project-detail-wrap">
@@ -430,7 +500,7 @@
                                 </a>
                             </div>
                             <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a href="" class="project-wrap w-inline-block">
+                                <a onclick="toggleModal('mohanaltezza', 'open')" class="project-wrap w-inline-block">
                                     <div class="project-square"><img loading="lazy" src="./assets/5.JPG" alt="" sizes="94vw"
                                             class="project-image" /></div>
                                     <div class="project-detail-wrap">
@@ -453,7 +523,7 @@
                     <div class="w-dyn-list">
                         <div role="list" class="collection-list w-dyn-items w-row">
                             <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a href="/projects/blaze" class="project-wrap w-inline-block">
+                                <a onclick="toggleModal('wallpainting', 'open')" class="project-wrap w-inline-block">
                                     <div class="project-square"><img loading="lazy" src="./assets/6.JPG" alt="" sizes="94vw"
                                             class="project-image" /></div>
                                     <div class="project-detail-wrap">
@@ -463,7 +533,7 @@
                                 </a>
                             </div>
                             <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a href="/projects/ghost" class="project-wrap w-inline-block">
+                                <a onclick="toggleModal('balbharti', 'open')" class="project-wrap w-inline-block">
                                     <div class="project-square"><img loading="lazy" src="./assets/7.jpeg" alt="" sizes="94vw"
                                             class="project-image" /></div>
                                     <div class="project-detail-wrap">
@@ -574,6 +644,49 @@
             </div>
         </div>
     </div>
+    <script>
+            const image_modals_container = document.getElementById('image_modals');
+            const image_tags = {
+                lapinospizza: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
+                mohanaltezza: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
+                wallpainting: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
+                balbharti: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
+            }
+            let childDocuments = ``;  
+            Object.keys(image_tags).forEach((tag) => {
+                const images = image_tags[tag];
+                let  images_document_string = ``;
+                images.forEach(image_src => {
+                    images_document_string += `
+                        <img loading="lazy" src="${image_src}" alt="" sizes="94vw" class="project-image" />
+                        `
+                    })
+                    childDocuments +=  `
+                    <div id="${tag}" class="modal">
+                        <div onclick="toggleModal('${tag}', 'close')" class="modal_backdrop"></div>
+                        <div class="modal__content">
+                            <a onclick="toggleModal('${tag}', 'close')" class="modal__close">&times;</a>
+                            <div class="modal_images_container">
+                               ${images_document_string} 
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            image_modals_container.innerHTML = childDocuments;
+
+        function toggleModal(targetName, action = 'close') {
+            const modal = document.getElementById(targetName)
+            const body = document.getElementById('body')
+            if (action === 'close') {
+                modal.classList.remove('modal-open');
+                body.style.overflow = 'visible';
+            } else {
+                modal.classList.add('modal-open');
+                body.style.overflow = 'hidden';
+            }
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="./js/script.js" type="text/javascript"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->

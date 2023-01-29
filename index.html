@@ -353,6 +353,8 @@
         </div>
     </div>
     <script>
+        (function() {
+
             const carousel_deck = document.getElementById('carousel-deck-container');
             let carousel_deck_children = ``;
             for (let a=1;a<=29;a++) {
@@ -389,7 +391,8 @@
                 `;
             });
             image_modals_container.innerHTML = childDocuments;
-
+        })();
+        
         function toggleModal(targetName, action = 'close') {
             const modal = document.getElementById(targetName)
             const body = document.getElementById('body')

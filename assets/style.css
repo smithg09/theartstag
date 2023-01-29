@@ -2123,7 +2123,8 @@ textarea.w-select {
         display: block
     }
     .w-nav-brand {
-        padding-left: 10px
+        padding-left: 10px;
+        display: none !important;
     }
 }
 
@@ -2502,6 +2503,18 @@ li {
     align-items: center;
     text-align: center;
 }
+
+.avatar-circle-small {
+            background-image: url(../logo.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 40px;
+            margin-bottom: 0px;
+            margin-right: 8px;
+            background-color: transparent;
+        }
 
 .avatar-circle {
     display: -webkit-box;
@@ -3577,7 +3590,7 @@ li {
     z-index: 4;
     width: 100%;
     height: 100%;
-    background-color: #eaf9fa;
+    background-color: #4c4837;
 }
 
 .bg-square-second {

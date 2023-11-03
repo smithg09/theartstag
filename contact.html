@@ -229,7 +229,8 @@
             justify-content: center;
             margin: 20px 0px 20px 20px;
             padding-right: 20px;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         .modal__close {
@@ -259,7 +260,7 @@
 </head>
 
 <body id="body">
-    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" node-id="d3dbbbfd-783f-ecd5-e9f9-8c081fa475d5" role="banner" data-duration="400" id="Navbar">
+    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Navbar">
         <div class="navigation-container">
             <div class="navigation-left">
                 <div class="avatar-circle-small"></div>
@@ -268,7 +269,7 @@
                 </a>
             </div>
             <div class="navigation-right">
-                <nav role="navigation" class="nav-menu w-nav-menu"><a href="././index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link">Work</a>
+                <nav role="navigation" class="nav-menu w-nav-menu"><a href="./index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link">Work</a><a href="./index.html" class="nav-link w-nav-link nav-link-active">Contact</a>
                     <a href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="nav-link w-nav-link"><img src="./assets/wa.png" width="25" height="25"></img></a>
                 </nav>
                 <div class="menu-button w-nav-button">
@@ -278,11 +279,11 @@
         </div>
     </div>
     <div class="gallery-section">
-        <div node-id="2b196ae1-0f64-fffe-de0b-b01b6bbce7ea" class="w-layout-grid gallery-grid">
+        <div class="w-layout-grid gallery-grid">
             <div class="grid-image-wrap"><img src="./assets/1.jpeg" loading="lazy" sizes="100vw"
                     alt="" class="grid-image" /></div>
             <div id="w-node-_96a2dd4c-3df0-4355-8d67-f9c28e6c5e6b-09c65d1b" class="gallery-centre">
-                <div style="opacity:0" class="grid-cover">
+                <div class="grid-cover">
                     <a
                         href="https://www.instagram.com/theartstag/" class="social-button w-inline-block">
                         <div><span class="bold-span">@theartstag</span> ON INSTAGRAM</div>
@@ -299,16 +300,16 @@
     </div>
     <div class="content-section">
         <div class="container">
-            <div node-id="c9d26477-efa7-ceff-de63-7d2e48d1e807" class="cta-block">
+            <div class="cta-block">
                 <h1>Let me know if you want to talk about a potential collaboration. I’m available <br/>for freelance work.</h1>
-                <a node-id="c9d26477-efa7-ceff-de63-7d2e48d1e80a" href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="cta-link-large w-inline-block">
+                <a href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="cta-link-large w-inline-block">
                     <div class="cta-text">Let’s design your idea</div>
                     <div class="arrow-wrap"><img src="./assets/5f99409a4f44a035a0c65d63_Arrow%20Champagne.svg" loading="lazy" alt="" class="arrow-yellow" /><img src="./assets/5f99409a4f44a0b4cec65da6_Arrow%20Up%20Blue.svg"
                             loading="lazy" alt="" class="arrow-blue" /></div>
                 </a>
             </div>
-        </div><img src="./assets/5f99409a4f44a085a0c65d68_Circle%20Champagne.svg" loading="lazy" node-id="c9d26477-efa7-ceff-de63-7d2e48d1e80e" alt="" class="circle-asset" /><img src="./assets/5f99409a4f44a000e7c65d73_Circle%20Champagne%20(Left).svg"
-            loading="lazy" node-id="c9d26477-efa7-ceff-de63-7d2e48d1e80f" alt="" class="circle-asset-left" /></div>
+        </div><img src="./assets/5f99409a4f44a085a0c65d68_Circle%20Champagne.svg" loading="lazy" alt="" class="circle-asset" /><img src="./assets/5f99409a4f44a000e7c65d73_Circle%20Champagne%20(Left).svg"
+            loading="lazy" alt="" class="circle-asset-left" /></div>
     <div class="footer-section">
         <div class="container">
             <div class="footer-wrap" style="border-color: #3f4451">
@@ -317,7 +318,7 @@
                         <a
                         href="https://www.instagram.com/theartstag/" target="_blank" class="social-link w-inline-block"><img src="./assets/5f99409a4f44a05b98c65d79_Instagram%20Line.svg" loading="lazy" alt="" /></a>
                     </div>
-                    <a href="mailto:theartstag@gmail.com" node-id="7ad12778-680d-fb1a-cf4b-23af6b9693c9" aria-current="page" class="footer-brand w-nav-brand w--current">
+                    <a href="mailto:theartstag@gmail.com" aria-current="page" class="footer-brand w-nav-brand w--current">
                         <!-- <div node-id="7ad12778-680d-fb1a-cf4b-23af6b9693ca" class="navigation-icon-wrap"><img src="./assets/5f99409a4f44a01c85c65d53_Mail%20Icon.svg" loading="lazy" alt="" class="navigation-mail" /><img src="./assets/5f99409a4f44a0a331c65d50_Arrow%20Icon%20(1).svg"
                                 loading="lazy" alt="" class="navigation-arrow" /></div> -->
                         <div >theartstag@gmail.com</div>

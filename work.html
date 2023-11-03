@@ -229,7 +229,8 @@
             justify-content: center;
             margin: 20px 0px 20px 20px;
             padding-right: 20px;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         .modal__close {
@@ -315,7 +316,7 @@
 </head>
 
 <body id="body">
-    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" node-id="d3dbbbfd-783f-ecd5-e9f9-8c081fa475d5" role="banner" data-duration="400" id="Navbar">
+    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Navbar">
         <div class="navigation-container">
             <div class="navigation-left">
                 <div class="avatar-circle-small"></div>
@@ -324,7 +325,7 @@
                 </a>
             </div>
             <div class="navigation-right">
-                <nav role="navigation" class="nav-menu w-nav-menu"><a href="././index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
+                <nav role="navigation" class="nav-menu w-nav-menu"><a href="./index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link nav-link-active">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
                     <a href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="nav-link w-nav-link"><img src="./assets/wa.png" width="25" height="25"></img></a>
                 </nav>
                 <div class="menu-button w-nav-button">
@@ -346,7 +347,7 @@
                     <div class="w-dyn-list">
                         <div role="list" class="collection-list w-dyn-items w-row">
                             <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a onclick="toggleModal('lapinospizza', 'open')" class="project-wrap w-inline-block">
+                                <a onclick="toggleModal('la_pinoz_pizza_ulhasnagar', 'open')" class="project-wrap w-inline-block">
                                     <div class="project-square"><img loading="lazy" src="./assets/4.JPG" alt="" sizes="94vw"
                                             class="project-image" /></div>
                                     <div class="project-detail-wrap">
@@ -374,12 +375,12 @@
                     </div> -->
                 </div>
                 <!-- style="-webkit-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" -->
-                <div node-id="4845b47a-7f78-a28e-2f24-168c536cc592"
+                <div
                     class="grid-column-large">
                     <div class="w-dyn-list">
                         <div role="list" class="collection-list w-dyn-items w-row">
                             <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a onclick="toggleModal('wallpainting', 'open')" class="project-wrap w-inline-block">
+                                <a onclick="toggleModal('thakur_village_kandivali', 'open')" class="project-wrap w-inline-block">
                                     <div class="project-square"><img loading="lazy" src="./assets/6.JPG" alt="" sizes="94vw"
                                             class="project-image" /></div>
                                     <div class="project-detail-wrap">
@@ -417,7 +418,7 @@
                         <a
                         href="https://www.instagram.com/theartstag/" target="_blank" class="social-link w-inline-block"><img src="./assets/5f99409a4f44a05b98c65d79_Instagram%20Line.svg" loading="lazy" alt="" /></a>
                     </div>
-                    <a href="mailto:theartstag@gmail.com" node-id="7ad12778-680d-fb1a-cf4b-23af6b9693c9" aria-current="page" class="footer-brand w-nav-brand w--current">
+                    <a href="mailto:theartstag@gmail.com" aria-current="page" class="footer-brand w-nav-brand w--current">
                         <!-- <div node-id="7ad12778-680d-fb1a-cf4b-23af6b9693ca" class="navigation-icon-wrap"><img src="./assets/5f99409a4f44a01c85c65d53_Mail%20Icon.svg" loading="lazy" alt="" class="navigation-mail" /><img src="./assets/5f99409a4f44a0a331c65d50_Arrow%20Icon%20(1).svg"
                                 loading="lazy" alt="" class="navigation-arrow" /></div> -->
                         <div >theartstag@gmail.com</div>
@@ -429,61 +430,108 @@
     <script>
         const gallery_array = [
             {
-                label: 'La Pinos Pizza',
-                img: './assets/4.JPG',
+                label: 'Altizza (Kalyan)',
+                code: 'altizza_kalyan',
+                img: '1.JPG'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/3.JPG',
+                label: 'Baby Room Kalyan',
+                code: 'baby_room_kalyan',
+                img: '1.JPG'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/2.JPG',
+                label: 'Balbharti School (Kandivali)',
+                code: 'balbharti_school_kandivali',
+                img: '1.JPG'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/1.jpeg',
+                label: 'Barave Village KDMC (Kalyan)',
+                code: 'barave_village_kdmc_kalyan',
+                img: '1.JPG'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/4.JPG',
+                label: 'Barave Village Raunak City',
+                code: 'barave_village_raunak_city',
+                img: '1.JPG'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/4.JPG',
+                label: 'Borivali East',
+                code: 'borivali_east',
+                img: '1.jpeg'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/4.JPG',
+                label: 'Goregaon Furniture Showroom',
+                img: '1.jpg',
+                code: 'goregaon_showroom'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/3.JPG',
+                label: 'Hospital Shashtri Nagar Dombivali',
+                img: '1.JPG',
+                code: 'hospital_shashtri_nagar_dombivali'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/2.JPG',
+                label: 'KDMC Building Kalyan',
+                img: '1.JPG',
+                code: 'kdmc_building_kalyan'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/1.jpeg',
+                label: 'KDMC Elect Department',
+                img: '1.JPG',
+                code: 'kdmc_elect_dept'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/4.JPG',
+                label: 'KDMC Sabhagruh FAB',
+                img: '1.JPG',
+                code: 'kdmc_sabhagruh_fab'
             },
             {
-                label: 'La Pinos Pizza',
-                img: './assets/4.JPG',
+                label: 'KDMC Sir Off',
+                img: '1.JPG',
+                code: 'kdmc_sir_off'
+            },
+            {
+                label: 'KDMC Waste Management Dept',
+                img: '1.JPG',
+                code: 'kdmc_wast_mang_dept'
+            },
+            {
+                label: 'KDMC Water Dept',
+                img: '1.JPG',
+                code: 'kdmc_water_dept'
+            },
+            {
+                label: 'Omkar Altamonte Malad',
+                img: '1.JPG',
+                code: 'omkar_altamonte_malad'
+            },
+            {
+                label: 'Physiotherapy Clinic',
+                img: '1.JPG',
+                code: 'physiotherapy_clinic'
+            },
+            {
+                label: 'Priyasi Ulhasnagar',
+                img: '1.JPG',
+                code: 'priyasi_ulhasnagar'
+            },
+            {
+                label: 'Rukmini Bai Hospital Kalyan',
+                img: '1.JPG',
+                code: 'rukmini_baI_hospital_kalyan'
+            },
+            {
+                label: 'Simpoli Borivali',
+                img: '1.JPG',
+                code: 'simpoli_borivali'
             },
         ];
         const workGallery = document.querySelector('.work-gallery');
         let galleryDocument = ``;
         gallery_array.forEach((gallery) => {
             galleryDocument += `
-                <div class="work-container" onclick="toggleModal('lapinospizza', 'open')">
+                <div class="work-container" onclick="toggleModal('${gallery.code}', 'open')">
                     <div class="img-container">
-                        <img src="${gallery.img}">
+                        <img src="./assets/work_photos/${gallery.code}/${gallery.img}">
                     </div>
                     <span>${gallery.label}</span>
                 </div>
@@ -494,10 +542,27 @@
     <script>
             const image_modals_container = document.getElementById('image_modals');
             const image_tags = {
-                lapinospizza: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
-                mohanaltezza: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
-                wallpainting: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
-                balbharti: ['./assets/4.JPG', './assets/4.JPG', './assets/4.JPG'],
+                altizza_kalyan: ['1.JPG', '2.JPG', '3.JPG', '4.JPG'],
+                baby_room_kalyan: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG'],
+                balbharti_school_kandivali: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.jpeg', '6.jpeg'],
+                barave_village_kdmc_kalyan: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG', '6.JPG'],
+                barave_village_raunak_city: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG', '6.JPG', '7.JPG', '8.JPG', '9.JPG', '10.JPG'],
+                borivali_east: ['1.jpeg', '2.jpeg', '3.jpeg'],
+                goregaon_showroom: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'],
+                hospital_shashtri_nagar_dombivali: ['1.JPG', '2.JPG', '3.JPG'],
+                kdmc_building_kalyan: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG', '6.JPG'],
+                kdmc_elect_dept: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG', '6.JPG'],
+                kdmc_sabhagruh_fab: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG', '6.JPG', '7.JPG', '8.JPG'],
+                kdmc_sir_off: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG', '6.JPG'],
+                kdmc_wast_mang_dept: ['1.JPG', '2.JPG', '3.JPG', '4.JPG', '5.JPG'],
+                kdmc_water_dept: ['1.JPG', '2.JPG'],
+                la_pinoz_pizza_ulhasnagar: ['1.JPG', '2.JPG', '3.JPG', '4.JPG'],
+                omkar_altamonte_malad: ['1.JPG', '2.JPG'],
+                physiotherapy_clinic: ['1.JPG', '2.JPG', '3.JPG', '4.jpeg'],
+                priyasi_ulhasnagar: ['1.JPG', '2.JPG', '3.JPG', '4.JPG'],
+                rukmini_baI_hospital_kalyan: ['1.JPG', '2.JPG'],
+                simpoli_borivali: ['1.JPG'],
+                thakur_village_kandivali: ['1.jpeg', '2.jpeg'],
             }
             let childDocuments = ``;  
             Object.keys(image_tags).forEach((tag) => {
@@ -505,7 +570,7 @@
                 let  images_document_string = ``;
                 images.forEach(image_src => {
                     images_document_string += `
-                        <img loading="lazy" src="${image_src}" alt="" sizes="94vw" class="project-image" />
+                        <img loading="lazy" src="./assets/work_photos/${tag}/${image_src}" alt="" sizes="94vw" class="project-image" />
                         `
                     })
                     childDocuments +=  `

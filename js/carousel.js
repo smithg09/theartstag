@@ -156,8 +156,8 @@ function Carousel(car){
 		// Add the buttondiv to the carousel controls
 		carousel.element.append(
 			$("<div class='carousel-controls'>").html(
-				"<div class='carousel-move-left'>&lt;</div>"+
-				"<div class='carousel-move-right'>&gt;</div>"
+				"<div class='carousel-move-left'><img src='./assets/right-arrow.png' class='chevron-right'/></div>"+
+				"<div class='carousel-move-right'><img src='./assets/right-arrow.png' class='chevron-right'/></div>"
 				).append(buttondiv)
 			);
 	};

@@ -230,7 +230,8 @@
             justify-content: center;
             margin: 20px 0px 20px 20px;
             padding-right: 20px;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         .modal__close {
@@ -251,6 +252,12 @@
             height: 100vh;
         }
 
+        .nav-link-active {
+            text-decoration: underline;
+            font-weight: 800;
+            pointer-events: none;
+        }
+
         @media screen and (max-width: 991px) {
             .nav-menu {
                 background-color: #1d1d1d !important;
@@ -260,7 +267,7 @@
 </head>
 
 <body id="body">
-    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" node-id="d3dbbbfd-783f-ecd5-e9f9-8c081fa475d5" role="banner" data-duration="400" id="Navbar">
+    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Navbar">
         <div class="navigation-container">
             <div class="navigation-left">
                 <div class="avatar-circle-small"></div>
@@ -269,7 +276,7 @@
                 </a>
             </div>
             <div class="navigation-right">
-                <nav role="navigation" class="nav-menu w-nav-menu"><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
+                <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="nav-link w-nav-link nav-link-active">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
                     <a href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="nav-link w-nav-link"><img src="./assets/wa.png" width="25" height="25"></img></a>
                 </nav>
                 <div class="menu-button w-nav-button">
@@ -281,27 +288,26 @@
     <div class="header">
         <div class="header-title-wrap">
             <div 
-                node-id="7fa333be-aad9-679c-1477-d9f98a58db93"
                 class="avatar-circle">
                  </div>
-            <div node-id="7fa333be-aad9-679c-1477-d9f98a58db93"
+            <div
                 class="title-wrapper">
                 <!-- <h3 class="title">Hi, I’m Kruti Patel</h3> -->
                 <!-- <img src="./artist.png" alt="" class="emoji-icon" /> -->
             </div>
-            <h1 node-id="f8e28b59-9e5f-0990-ce20-32058bafa547"
+            <h1 
                 class="hero-display" style="margin-bottom: 0px">The ArtStag</h1>
-            <h1 node-id="f8e28b59-9e5f-0990-ce20-32058bafa547"
+            <h1
                 class="hero-display">Designing Studio</h1>
             <!-- <p node-id="8e82238d-82ae-fb81-44ac-81a2648ba4bc"
                 class="paragraph-display">a <strong>Product Designer</strong> and <strong>Visual Developer</strong> in SF. I specialize in UI/UX Design, Responsive Web Design, and Visual Development.</p> -->
-            <p node-id="8e82238d-82ae-fb81-44ac-81a2648ba4bc"
+            <p 
                 class="paragraph-display">Customise your thoughts <br /> into creativity</p>
-                <a node-id="a77ce566-82ce-3690-e9ea-6dbaca8e0288"
+                <a 
                 href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="button w-button">CONNECT WITH ME</a></div>
         <div class="ag-smoke-1"><img src="./assets/smoke-4.png"></div>
     </div>
-    <div class="carousel" data-timer="4" data-controls="pagination" style="height:90vh;">
+    <div class="carousel" data-timer="4" data-controls="directional">
 		<div class="carousel-deck" id="carousel-deck-container">
 			
 		</div>
@@ -343,7 +349,7 @@
                         <a
                         href="https://www.instagram.com/theartstag/" target="_blank" class="social-link w-inline-block"><img src="./assets/5f99409a4f44a05b98c65d79_Instagram%20Line.svg" loading="lazy" alt="" /></a>
                     </div>
-                    <a href="mailto:theartstag@gmail.com" node-id="7ad12778-680d-fb1a-cf4b-23af6b9693c9" aria-current="page" class="footer-brand w-nav-brand w--current">
+                    <a href="mailto:theartstag@gmail.com" aria-current="page" class="footer-brand w-nav-brand w--current">
                         <!-- <div node-id="7ad12778-680d-fb1a-cf4b-23af6b9693ca" class="navigation-icon-wrap"><img src="./assets/5f99409a4f44a01c85c65d53_Mail%20Icon.svg" loading="lazy" alt="" class="navigation-mail" /><img src="./assets/5f99409a4f44a0a331c65d50_Arrow%20Icon%20(1).svg"
                                 loading="lazy" alt="" class="navigation-arrow" /></div> -->
                         <div >theartstag@gmail.com</div>

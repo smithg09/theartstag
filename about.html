@@ -229,7 +229,8 @@
             justify-content: center;
             margin: 20px 0px 20px 20px;
             padding-right: 20px;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
 
         .modal__close {
@@ -259,7 +260,7 @@
 </head>
 
 <body id="body">
-    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" node-id="d3dbbbfd-783f-ecd5-e9f9-8c081fa475d5" role="banner" data-duration="400" id="Navbar">
+    <div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="Navbar">
         <div class="navigation-container">
             <div class="navigation-left">
                 <div class="avatar-circle-small"></div>
@@ -268,7 +269,7 @@
                 </a>
             </div>
             <div class="navigation-right">
-                <nav role="navigation" class="nav-menu w-nav-menu"><a href="././index.html" class="nav-link w-nav-link">Home</a><a href="./work.html" class="nav-link w-nav-link">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
+                <nav role="navigation" class="nav-menu w-nav-menu"><a href="./index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link nav-link-active">About</a><a href="./work.html" class="nav-link w-nav-link">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
                     <a href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="nav-link w-nav-link"><img src="./assets/wa.png" width="25" height="25"></img></a>
                 </nav>
                 <div class="menu-button w-nav-button">
@@ -306,7 +307,7 @@
     <div id="Services" class="service-section">
         <div class="container-large">
             <!-- style="-webkit-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" -->
-            <div node-id="de93650c-acc4-fb23-4225-087ecde22b39"
+            <div
                 class="service-block-wrapper">
                 <div class="title-wrap title-space">
                     <h2>Services</h2>
@@ -326,7 +327,7 @@
         </div>
     </div>
     <div class="client-section" style="padding: 200px 1%;" id="Clients">
-        <div node-id="1e09b61e-eb40-40fb-fe46-bef12e29d67c" 
+        <div
             class="container">
             <div class="title-wrap">
                 <h3>Clients</h3><img src="./assets/5f99409a4f44a00e47c65d56_Logo%20Brand%20Line.svg" loading="lazy" alt="" class="accent" /></div>
@@ -340,12 +341,12 @@
         </div>
     </div>
     <div class="content-section">
-        <div node-id="ecb2dd4c-05d7-9f8e-d2e4-e3e89166e914" class="container">
+        <div class="container">
             <div class="title-wrap">
                 <h1>A few things 🙄 <br/>clients normally ask me:</h1>
             </div>
             <div class="faq-wrapper">
-                <div node-id="ecb2dd4c-05d7-9f8e-d2e4-e3e89166e925" class="faq-question-wrap">
+                <div class="faq-question-wrap">
                     <a class="faq-question-bar w-inline-block">
                         <div class="question-title">What is your location?</div>
                         <div class="faq-circle"><img src="./assets/5f99409a4f44a04816c65d64_Chevron%20Arrow.svg" loading="lazy" alt="" class="plus-icon" /></div>
@@ -354,7 +355,7 @@
                         <p class="faq-paragraph"> We are located in Mumbai. But we work pan india.</p>
                     </div>
                 </div>
-                <div node-id="ecb2dd4c-05d7-9f8e-d2e4-e3e89166e937" class="faq-question-wrap">
+                <div class="faq-question-wrap">
                     <a class="faq-question-bar w-inline-block">
                         <div class="question-title">What are your rates?</div>
                         <div class="faq-circle"><img src="./assets/5f99409a4f44a04816c65d64_Chevron%20Arrow.svg" loading="lazy" alt="" class="plus-icon" /></div>
@@ -363,7 +364,7 @@
                         <p class="faq-paragraph">Please contact us to know more.</p>
                     </div>
                 </div>
-                <div node-id="ecb2dd4c-05d7-9f8e-d2e4-e3e89166e92e" class="faq-question-wrap">
+                <div class="faq-question-wrap">
                     <a class="faq-question-bar w-inline-block">
                         <div class="question-title">What is the mode of communication?</div>
                         <div class="faq-circle"><img src="./assets/5f99409a4f44a04816c65d64_Chevron%20Arrow.svg" loading="lazy" alt="" class="plus-icon" /></div>
@@ -383,7 +384,7 @@
                         <a
                         href="https://www.instagram.com/theartstag/" target="_blank" class="social-link w-inline-block"><img src="./assets/5f99409a4f44a05b98c65d79_Instagram%20Line.svg" loading="lazy" alt="" /></a>
                     </div>
-                    <a href="mailto:theartstag@gmail.com" node-id="7ad12778-680d-fb1a-cf4b-23af6b9693c9" aria-current="page" class="footer-brand w-nav-brand w--current">
+                    <a href="mailto:theartstag@gmail.com" aria-current="page" class="footer-brand w-nav-brand w--current">
                         <!-- <div node-id="7ad12778-680d-fb1a-cf4b-23af6b9693ca" class="navigation-icon-wrap"><img src="./assets/5f99409a4f44a01c85c65d53_Mail%20Icon.svg" loading="lazy" alt="" class="navigation-mail" /><img src="./assets/5f99409a4f44a0a331c65d50_Arrow%20Icon%20(1).svg"
                                 loading="lazy" alt="" class="navigation-arrow" /></div> -->
                         <div >theartstag@gmail.com</div>

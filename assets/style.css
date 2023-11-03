@@ -3581,6 +3581,8 @@ li {
     object-fit: cover;
     -o-object-position: 50% 0%;
     object-position: 50% 0%;
+    min-width: 400px;
+    min-height: 500px;
 }
 
 .bg-square-first {
@@ -4794,4 +4796,9 @@ li {
     font-weight: 300;
     font-style: normal;
     font-display: swap;
+}
+.nav-link-active {
+    text-decoration: underline;
+    font-weight: 800;
+    pointer-events: none;
 }

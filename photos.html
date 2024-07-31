@@ -263,6 +263,54 @@
             padding-top: 0;
         }
 
+        .work-gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-basis: 4; */
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .work-container {
+            width: 500px;
+            flex-grow: 1;
+            height: 600px;
+            margin: 12px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            transition: all .5s;
+        }
+
+        @media screen and (max-width:767px) {
+             .work-container {
+                height: 300px;
+             }
+        }
+
+        .img-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .work-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            transition: all .5s;
+            object-fit: fill;
+        }
+        .work-container span {
+            margin-top: 12px;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.025em;
+        }
+
     </style>
 </head>
 
@@ -276,7 +324,7 @@
                 </a>
             </div>
             <div class="navigation-right">
-                <nav role="navigation" class="nav-menu w-nav-menu"><a href="./index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link nav-link-active">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
+                <nav role="navigation" class="nav-menu w-nav-menu"><a href="./index.html" class="nav-link w-nav-link">Home</a><a href="./about.html" class="nav-link w-nav-link">About</a><a href="./work.html" class="nav-link w-nav-link">Work</a><a href="./contact.html" class="nav-link w-nav-link">Contact</a>
                     <a href="https://wa.me/919930552498?text=Welcome+to+Artstag%2C+How+may+i+help+you+%3F" class="nav-link w-nav-link"><img src="./assets/wa.png" width="25" height="25"></img></a>
                 </nav>
                 <div class="menu-button w-nav-button">
@@ -286,74 +334,9 @@
         </div>
     </div>
     <!-- Modal Section -->
-    <div id="image_modals">
-    </div>
-    <div class="content-section">
-        <div class="container">
-            <div class="title-left">
-                <h1>The work I do,<br/>and <span class="accent-business">business</span> I help.</h1>
-            </div>
-            <div class="w-layout-grid project-grid">
-                <div class="grid-column">
-                    <div class="w-dyn-list">
-                        <div role="list" class="collection-list w-dyn-items w-row">
-                            <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a onclick="toggleModal('la_pinoz_pizza_ulhasnagar', 'open')" class="project-wrap w-inline-block">
-                                    <div class="project-square"><img loading="lazy" src="./assets/4.JPG" alt="" sizes="94vw"
-                                            class="project-image" /></div>
-                                    <div class="project-detail-wrap">
-                                        <h4>La Pinos Pizza</h4>
-                                        <p>India's fastest growing pizza place started back in 2011 in Chandigarh. As of today, La Pino'z has 500+ outlets across India with the recent one opening in London.</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a onclick="toggleModal('mohanaltezza', 'open')" class="project-wrap w-inline-block">
-                                    <div class="project-square"><img loading="lazy" src="./assets/5.JPG" alt="" sizes="94vw"
-                                            class="project-image" /></div>
-                                    <div class="project-detail-wrap">
-                                        <h4>Mohan Altezza</h4>
-                                        <p>Apartment complex in Kalyan, India, Maharashtra.</p>
-                                    </div>
-                                </a>
-                            </div> -->
-                        </div>
-                    </div>
-                    <!-- <div class="social-button-wrapper">
-                        <a href="/" class="social-button-dark w-inline-block">
-                            <div><span class="bold-span">View More</span></div>
-                        </a>
-                    </div> -->
-                </div>
-                <!-- style="-webkit-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 55PX, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" -->
-                <div
-                    class="grid-column-large">
-                    <div class="w-dyn-list">
-                        <div role="list" class="collection-list w-dyn-items w-row">
-                            <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a onclick="toggleModal('thakur_village_kandivali', 'open')" class="project-wrap w-inline-block">
-                                    <div class="project-square"><img loading="lazy" src="./assets/6.JPG" alt="" sizes="94vw"
-                                            class="project-image" /></div>
-                                    <div class="project-detail-wrap">
-                                        <h4>Wall Painting</h4>
-                                        <p>Thakur village, Kandivali</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- <div role="listitem" class="project w-dyn-item w-col w-col-6">
-                                <a onclick="toggleModal('balbharti', 'open')" class="project-wrap w-inline-block">
-                                    <div class="project-square"><img loading="lazy" src="./assets/7.jpeg" alt="" sizes="94vw"
-                                            class="project-image" /></div>
-                                    <div class="project-detail-wrap">
-                                        <h4>Balbharti School</h4>
-                                        <p>School wall paintings located in kandivali.</p>
-                                    </div>
-                                </a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="content-section" style="padding-top: 10px;">
+        <h5 style="display: flex;align-items: center;justify-content: flex-start;text-decoration: underline;cursor: pointer;" onclick="history.back()">Go back </h5>
+        <div class="title-left">
         </div>
         <div class="gallery-container">
             <div class="work-gallery">
@@ -379,43 +362,25 @@
         </div>
     </div>
     <script src="./config.js"></script>
-    <script src="./workFolders.js"></script>
     <script>
-            const image_modals_container = document.getElementById('image_modals');
-            let childDocuments = ``;  
-            Object.keys(image_tags).forEach((tag) => {
-                const images = image_tags[tag];
-                let  images_document_string = ``;
-                images.forEach(image_src => {
-                    images_document_string += `
-                        <img loading="lazy" src="./assets/work_photos/${tag}/${image_src}" alt="" sizes="94vw" class="project-image" />
-                        `
-                    })
-                    childDocuments +=  `
-                    <div id="${tag}" class="modal">
-                        <div onclick="toggleModal('${tag}', 'close')" class="modal_backdrop"></div>
-                        <div class="modal__content">
-                            <a onclick="toggleModal('${tag}', 'close')" class="modal__close">&times;</a>
-                            <div class="modal_images_container">
-                               ${images_document_string} 
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-            image_modals_container.innerHTML = childDocuments;
+        const urlParams = new URLSearchParams(window.location.search);
+        const folder = urlParams.get('folder');
 
-        function toggleModal(targetName, action = 'close') {
-            const modal = document.getElementById(targetName)
-            const body = document.getElementById('body')
-            if (action === 'close') {
-                modal.classList.remove('modal-open');
-                body.style.overflow = 'visible';
-            } else {
-                modal.classList.add('modal-open');
-                body.style.overflow = 'hidden';
-            }
-        }
+        const workGallery = document.querySelector('.work-gallery');
+        const titleLeft = document.querySelector('.title-left');
+        const folderData = gallery_array.find(el => el.code === folder) || gallery_array[0];
+        titleLeft.innerHTML = `<h1>${folderData ? folderData.label : 'Not Found'}</h1>`;
+        let galleryDocument = ``;
+        image_tags[folderData.code].forEach((name) => {
+            galleryDocument += `
+                <div class="work-container">
+                    <div class="img-container">
+                        <img src="./assets/work_photos/${folderData.code}/${name}">
+                    </div>
+                </div>
+            `;
+        }); 
+        workGallery.innerHTML = galleryDocument;
     </script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="./js/script.js" type="text/javascript"></script>
